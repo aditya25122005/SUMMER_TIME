@@ -5,6 +5,7 @@ import java.util.Stack;
 public class leetcode_2375 {
     public static void main(String[] args) {
         String str="IIIDIDDD";
+        System.out.println(construct_smallest(str));
 
     }
     public static String construct_smallest(String str){

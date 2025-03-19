@@ -7,12 +7,14 @@ import OOPS.student;
 public class insert_last {
     public static void main(String[] args) {
         Stack<Integer> st=new Stack<>();
-        st.push(10);
-        st.push(20);
-        st.push(30);
+        
         int item=500;
         System.out.println(st);
-        insert_last(st,item);
+        insert_last(st,5);
+        insert_last(st,4);
+        insert_last(st,2);
+        System.out.println(st.pop());
+
         System.out.println(st);
     }
     public static void insert_last(Stack<Integer> st,int item){
