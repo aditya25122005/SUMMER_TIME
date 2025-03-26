@@ -35,7 +35,8 @@ public class Cycle_removal {
 	}
 
 	public void CreateCycle(){
-		tail.next = getNode(2);
+		Node nn=getNode(2);
+		tail.next = nn;
 	}
 	public void Display() {
 		Node temp = head;
