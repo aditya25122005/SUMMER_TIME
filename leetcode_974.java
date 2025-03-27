@@ -1,5 +1,3 @@
-
-import java.util.*;
 public class leetcode_974 {
     public static void main(String[] args) {
         int [] arr={1,2,3,4,6};
@@ -21,7 +19,7 @@ public class leetcode_974 {
         }
         long ans=0;
         for(int i=0;i<freq.length;i++){
-            if(freq[i]>2){
+            if(freq[i]>=2){
                 long x= freq[i];
                 ans+=(x*(x-1)/2);
             }
