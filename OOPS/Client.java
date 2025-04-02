@@ -29,10 +29,5 @@ public class Client {
         System.out.println(obj.d);
         System.out.println(obj.d1);
         System.out.println(obj.d2);
-
-        
-        
-       
-
     }
 }
