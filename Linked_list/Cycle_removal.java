@@ -53,6 +53,7 @@ public class Cycle_removal {
 
         while(fast!=null && fast.next != null){
             fast=fast.next.next;
+			slow=slow.next;
             if(slow==fast){
                 return slow;
             }
@@ -60,6 +61,44 @@ public class Cycle_removal {
         return null; 
 
     }
+	public void CycleRemoval2(){
+		Node meet= hasCycle();
+		if(meet==null){
+			return;
+		}
+		//cycle ki length
+		int count=1;
+		Node temp=meet;
+		while(temp.next!=meet){
+			count++;
+			temp=temp.next;
+		}
+		// ek ko pehle m distance chala do
+		Node fast=head;
+		for(int i=0;i<count;i++){
+			fast=fast.next;
+		}
+		Node slow= head;
+		while(slow.next != fast.next){
+			slow=slow.next;
+			fast=fast.next;
+		}
+		fast.next=null;
+	}
+	public void floydCycleremoval(){
+		Node meet= hasCycle();
+		if(meet==null){
+			return;
+		}
+		Node fast=meet;
+		Node slow=head;
+		while(slow.next != fast.next){
+			slow=slow.next;
+			fast=fast.next;
+		}
+		fast.next=null;
+		
+	}
     public void CycleRemove(){
         Node Meet=hasCycle();
         if(Meet==null){
@@ -81,7 +120,7 @@ public class Cycle_removal {
 
 	public static void main(String[] args) throws Exception {
 		Cycle_removal cl = new Cycle_removal();
-		cl.addLast(1);
+		cl.addLast(1); 
 		cl.addLast(2);
 		cl.addLast(3);
 		cl.addLast(4);
@@ -90,6 +129,7 @@ public class Cycle_removal {
 		cl.addLast(7);
 		cl.addLast(8);
 		cl.Display();
+		System.out.println(cl.getNode(2).val);
 	}
 
 }

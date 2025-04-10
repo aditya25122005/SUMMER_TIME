@@ -1,6 +1,6 @@
 package apr;
 
-public class cars {
+public class cars implements Comparable<cars> {
     int price;
     String color;
     int speed;
@@ -15,6 +15,12 @@ public class cars {
     }
     public String toString(){
         return "Price: " + price  + " Color: " + color + " Speed:"+ speed;
+    }
+    @Override
+    public int compareTo(cars o) {
+        // TODO Auto-generated method stub
+        return this.price-o.price;
+    
     }
 
     
