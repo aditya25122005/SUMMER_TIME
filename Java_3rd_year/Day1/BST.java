@@ -27,7 +27,6 @@ public class BST {
         String str="<--"+nn.val+"-->";
         if(nn.left!=null){
             str= nn.left.val+str;
-
         }
         else{
             str="."+str;
