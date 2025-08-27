@@ -1,4 +1,4 @@
-package DP;
+package Java_3rd_year.DP;
 
 public class House_robber {
     public static void main(String[] args) {

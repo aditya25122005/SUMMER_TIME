@@ -1,4 +1,4 @@
-package Java_3rd_year.Day1;
+package Java_3rd_year.DP;
 
 public class min_path_sum {
     public static void main(String[] args) {

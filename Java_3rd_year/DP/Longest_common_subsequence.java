@@ -1,4 +1,4 @@
-package DP;
+package Java_3rd_year.DP;
 public class Longest_common_subsequence {
  public static void main(String[] args) {
     String s1="abcde";

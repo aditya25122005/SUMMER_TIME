@@ -1,5 +1,7 @@
-package Java_3rd_year.HashMap;
+
 import java.util.*;
+
+import Java_3rd_year.HashMap.HashMap;
 public class Hashmap_Demo {
     public static void main(String[] args) {
         HashMap<String,Integer> map= new HashMap<>();
