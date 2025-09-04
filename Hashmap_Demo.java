@@ -54,8 +54,5 @@ public class Hashmap_Demo {
         for(String k:map.keySet()){
             System.out.println(k+" "+map.get(k));
         }
-
-
-
     }
 }
