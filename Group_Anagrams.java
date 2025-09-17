@@ -11,7 +11,7 @@ public class Group_Anagrams{
     public static List<List<String>> group_Anagrams(String[] arr){
         
         HashMap<String,List<String>> map= new HashMap<>();
-        for(int i=0;i<arr.length;i++){
+        for(int i=  0;i<arr.length;i++){
             String key= GetKey(arr[i]);
             if(!map.containsKey(key)){
                 map.put(key,new ArrayList<>());
