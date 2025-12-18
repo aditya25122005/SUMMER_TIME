@@ -1,0 +1,106 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        int [] arr= {5,2,4,7,9,1,100,3,-9};
+        // bubbleSort(arr);
+        // SelectionSort(arr);
+        // InsertionSort(arr);
+        int [] res=MergeSort(arr,0,arr.length-1);
+        System.out.println(Arrays.toString(res));
+        // System.out.println(Arrays.toString(arr));
+    }
+    public static int[] MergeSort(int[] arr, int lo, int hi){
+        if(lo==hi){
+            int[] base= new int[1];
+            base[0]=arr[lo];
+            return base;
+        }
+        int mid=lo+(hi-lo)/2;
+        int [] A= MergeSort(arr,lo,mid);
+        int [] B= MergeSort(arr,mid+1,hi);
+        
+        return Merge(A,B);
+    }
+    public static int[] Merge(int[] A, int [] B){
+        int [] ans= new int[A.length+B.length];
+        int i=0;
+        int j=0;
+        int k=0;
+        while(i<A.length && j<B.length){
+            if(A[i]<B[j]){
+                ans[k]=A[i];
+                i++;
+                k++;
+            }
+            else{
+                ans[k]=B[j];
+                j++;
+                k++;
+            }
+        }
+        
+        while(i<A.length){
+            ans[k]=A[i];
+            i++;
+            k++;
+        }
+        while(j<B.length){
+            ans[k]=B[j];
+            j++;
+            k++;
+            
+        }
+        return ans;
+    }
+    
+    
+    public static void InsertionSort(int[] arr){
+        // Basic idea
+        // Let first index is already at correct position
+        // start from second index and fix it in previously already sorted part
+        for(int i=1;i<arr.length;i++){
+            int key=arr[i];
+            int j=i-1;
+            while(j>=0 && arr[j]>key){
+                arr[j+1]=arr[j];
+                j--;
+            }
+            arr[j+1]=key;
+        }
+    }
+    public static void SelectionSort(int[] arr){
+        for(int i=0;i<arr.length;i++){
+            int mini = i;
+            int idx=findMin(arr,i);
+            
+            if(arr[idx]<arr[i]){
+                int temp=arr[i];
+                arr[i]=arr[idx];
+                arr[idx]=temp;
+            }
+        }
+    }
+    public static int findMin(int [] arr, int j){
+        int mini = j;
+        for(int i=j+1;i<arr.length;i++){
+            if(arr[i]<arr[mini]){
+                mini=i;
+            }
+        }
+        return mini;
+    }
+    public static void bubbleSort(int[] arr){
+        int n= arr.length;
+        for(int turn=0;turn<n-1;turn++){
+            for(int i=0;i<n-1;i++){
+                if(arr[i]>arr[i+1]){
+                    int temp=arr[i];
+                    arr[i]=arr[i+1];
+                    arr[i+1]= temp;
+                }
+            }
+        }
+    }
+}
