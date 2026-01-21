@@ -24,8 +24,7 @@ public class wine_problem {
             }
             year--;
         }
-        return dp[0][dp.length-1];
-
+        return dp[0][dp.length-1]; 
     }
     //length by substring
     public static int Max_Profit(int[] wine, int i, int j, int year){
