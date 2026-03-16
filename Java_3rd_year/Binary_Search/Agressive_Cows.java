@@ -1,4 +1,4 @@
-package Java_3rd_year;
+package Java_3rd_year.Binary_Search;
 import java.util.*;
 public class Agressive_Cows {
     public static void main(String[] args) {

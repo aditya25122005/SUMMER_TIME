@@ -1,5 +1,6 @@
-
 import java.util.*;
+
+// import Java_3rd_year.HashMap.HashMap;
 public class Group_Anagrams{
     public static void main(String[] args) {
         String [] strs=  {"eat","tea","tan","ate","nat","bat"};

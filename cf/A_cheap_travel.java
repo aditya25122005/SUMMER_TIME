@@ -1,3 +1,4 @@
+package cf;
 import java.util.Scanner;
 
 public class A_cheap_travel {
